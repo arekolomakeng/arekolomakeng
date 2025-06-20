@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>A Re Kolomakeng</title>
+  <meta name="description" content="A Re Kolomakeng is a community-driven initiative cleaning the streets of Pretoria through cleanups, waste management, and park maintenance." />
+  <meta name="keywords" content="Pretoria, cleanup, community, waste management, parks, volunteering" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="index-css.css" />
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Project: A Re Kolomakeng</h1>
+    <p>Let's clean up our city!</p>
+  </header>
+
+  <nav>
+    <a href="index.html" aria-current="page">Home</a>
+    <a href="about-us.html">About Us</a>
+    <a href="community-programs.html">Programs</a>
+    <a href="volunteer-in-pretoria.html">Volunteering</a>
+    <a href="contact-us.html">Contacts & Enquiries</a>
+  </nav>
+
+  <div class="banner" role="banner" aria-label="Main banner">
+    <div>Taking it one paper at a time.</div>
+  </div>
+
+  <section class="content fade-in" tabindex="0">
+    <h2>Who We Are</h2>
+    <p>
+      Project: A Re Kolomakeng is a community-driven initiative focused on cleaning the streets of Pretoria. The goal is to tackle littering, illegal dumping, and neglected public spaces through cleanups, waste management, and park maintenance.
+    </p>
+
+    <div class="image-gallery" aria-label="Gallery of community cleanup images">
+      <img src="Cleanup Day.jpg" alt="Community participating in a cleanup" class="clickable-img" tabindex="0" />
+      <img src="Waste Management.jpg" alt="Proper waste disposal practices" class="clickable-img" tabindex="0" />
+      <img src="Park Cleanup.jpg" alt="Volunteers restoring a park" class="clickable-img" tabindex="0" />
+    </div>
+
+    <div class="banner" style="background-image: url('grass.jpg'); height: 300px; font-size: 2rem;">
+      <div>Join Us In Making a Difference</div>
+    </div>
+
+    <!-- New Leaflet Map Section -->
+    <h2 style="margin-top: 2rem;">Find Us in Pretoria</h2>
+    <div id="map" style="height: 400px; margin-top: 1rem; border-radius: 10px;"></div>
+
+  </section>
+
+  <footer>
+    <p>&copy; 2025 A Re Kolomakeng. All rights reserved.</p>
+  </footer>
+
+  <!-- Image Modal -->
+  <div class="modal" id="imageModal" hidden>
+    <button id="modalCloseBtn" aria-label="Close image modal">&times;</button>
+    <img id="modalImg" src="" alt="Enlarged view" />
+  </div>
+
+  <script src="index-js.js"></script>
+
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <!-- Map Init Script -->
+  <script>
+    const map = L.map('map').setView([-25.7479, 28.2293], 13); // Pretoria coordinates
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    L.marker([-25.7479, 28.2293])
+      .addTo(map)
+      .bindPopup('Project: A Re Kolomakeng<br>Pretoria, South Africa')
+      .openPopup();
+  </script>
+</body>
+</html>

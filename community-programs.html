@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Programs - Project: A Re Kolomakeng</title>
+  <meta name="description" content="Explore the environmental programs offered by Project: A Re Kolomakeng, including cleanups, education, and community parks maintenance." />
+  <meta name="keywords" content="programs, environmental, cleanups, education, parks, community" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="shared-css.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Our Programs</h1>
+    <p>Working together for a cleaner Pretoria</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about-us.html">About Us</a>
+    <a href="community-programs.html" aria-current="page">Programs</a>
+    <a href="volunteer-in-pretoria.html">Volunteering</a>
+    <a href="contact-us.html">Contacts & Enquiries</a>
+  </nav>
+
+  <main class="content fade-in" tabindex="0">
+
+    <section class="section">
+      <h2>Cleanup Campaigns</h2>
+      <p>Join community-led cleanup efforts to keep our streets and parks litter-free.</p>
+      <ul class="steps">
+        <li>Participate in local cleanup events</li>
+        <li>Receive all necessary equipment and supplies</li>
+        <li>Track collective impact through community dashboards</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Eco-Education</h2>
+      <p>Empowering youth and adults alike with knowledge on sustainability and waste management.</p>
+      <ul class="steps">
+        <li>Workshops in schools and community centers</li>
+        <li>Creative eco-club activities and projects</li>
+        <li>Support for teacher and volunteer training</li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Community Parks Maintenance</h2>
+      <p>Helping maintain and beautify local parks and recreational areas.</p>
+      <ul class="steps">
+        <li>Regular park cleanup and landscaping</li>
+        <li>Community engagement for park stewardship</li>
+        <li>Organizing seasonal planting and maintenance events</li>
+      </ul>
+    </section>
+
+    <div class="image-row" aria-label="Images of various environmental programs">
+      <img src="Cleanup Day.jpg" alt="Volunteers cleaning up streets" class="clickable-img" tabindex="0" />
+      <img src="Eco Education.jpg" alt="Students learning about sustainability" class="clickable-img" tabindex="0" />
+      <img src="Park Cleanup.jpg" alt="Community members maintaining a park" class="clickable-img" tabindex="0" />
+    </div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2025 A Re Kolomakeng. All rights reserved.</p>
+  </footer>
+
+  <!-- Modal container for image enlarge -->
+  <div class="modal" id="imageModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1" hidden>
+    <div class="modal-content">
+      <button id="modalCloseBtn" aria-label="Close image modal">&times;</button>
+      <img id="modalImg" src="" alt="Enlarged view" />
+    </div>
+  </div>
+
+  <script src="main-js.js"></script>
+</body>
+</html>

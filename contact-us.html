@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact & Enquiries - Project A Re Kolomakeng</title>
+  <meta name="description" content="Contact Project A Re Kolomakeng for volunteer signups, enquiries, and partnership information." />
+  <meta name="keywords" content="contact, enquiries, volunteer, partnership, email, phone" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="shared-css.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Contact Us</h1>
+    <p>We'd Love to Hear From You</p>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about-us.html">About Us</a>
+    <a href="coummunity-programs.html">Programs</a>
+    <a href="volunteer-in-pretoria.html">Volunteering</a>
+    <a href="contact-us.html" aria-current="page">Contacts & Enquiries</a>
+  </nav>
+
+  <main class="content fade-in" tabindex="0">
+    <section class="section">
+      <h2>Get in Touch</h2>
+      <p>
+        Whether you want to volunteer, partner, or ask a question, feel free to reach out!
+      </p>
+
+      <div class="forms-container">
+        <!-- Enquiry Form -->
+        <form id="enquiryForm" action="#" method="post" aria-label="Enquiry form" novalidate>
+          <h3>General Enquiry</h3>
+
+          <label for="enquiryName">Name:</label><br />
+          <input type="text" id="enquiryName" name="name" required aria-describedby="enquiryNameError" />
+          <span id="enquiryNameError" class="error" aria-live="polite"></span><br />
+
+          <label for="enquiryEmail">Email:</label><br />
+          <input type="email" id="enquiryEmail" name="email" required aria-describedby="enquiryEmailError" />
+          <span id="enquiryEmailError" class="error" aria-live="polite"></span><br />
+
+          <label for="enquiryPhone">Phone Number:</label><br />
+          <input type="tel" id="enquiryPhone" name="phone" pattern="^\+?[0-9\s\-]{7,15}$" placeholder="+1234567890" aria-describedby="enquiryPhoneError" />
+          <span id="enquiryPhoneError" class="error" aria-live="polite"></span><br />
+
+          <label for="enquiryMessage">Message:</label><br />
+          <textarea id="enquiryMessage" name="message" rows="5" required aria-describedby="enquiryMessageError"></textarea>
+          <span id="enquiryMessageError" class="error" aria-live="polite"></span><br />
+
+          <button type="submit">Send Enquiry</button>
+        </form>
+
+        <!-- Volunteer Form -->
+        <form id="volunteerForm" action="#" method="post" aria-label="Volunteer signup form" novalidate>
+          <h3>Volunteer Signup</h3>
+
+          <label for="volunteerName">Name:</label><br />
+          <input type="text" id="volunteerName" name="name" required aria-describedby="volunteerNameError" />
+          <span id="volunteerNameError" class="error" aria-live="polite"></span><br />
+
+          <label for="volunteerEmail">Email:</label><br />
+          <input type="email" id="volunteerEmail" name="email" required aria-describedby="volunteerEmailError" />
+          <span id="volunteerEmailError" class="error" aria-live="polite"></span><br />
+
+          <label for="volunteerPhone">Phone Number:</label><br />
+          <input type="tel" id="volunteerPhone" name="phone" pattern="^\+?[0-9\s\-]{7,15}$" placeholder="+1234567890" aria-describedby="volunteerPhoneError" />
+          <span id="volunteerPhoneError" class="error" aria-live="polite"></span><br />
+
+          <label for="volunteerMessage">Message:</label><br />
+          <textarea id="volunteerMessage" name="message" rows="5" required aria-describedby="volunteerMessageError"></textarea>
+          <span id="volunteerMessageError" class="error" aria-live="polite"></span><br />
+
+          <button type="submit">Sign Up to Volunteer</button>
+        </form>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 A Re Kolomakeng. All rights reserved.</p>
+  </footer>
+
+  <div class="modal" id="imageModal" role="dialog" aria-modal="true" hidden>
+    <div class="modal-content">
+      <button id="modalCloseBtn" aria-label="Close image modal">&times;</button>
+      <img id="modalImg" src="" alt="" />
+    </div>
+  </div>
+
+  <script src="main-js.js"></script>
+</body>
+</html>
